@@ -10,6 +10,12 @@ A generic [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)
 [![youtube](https://img.shields.io/badge/youtube-kevin%20schaal-FF0000.svg)](https://www.youtube.com/channel/UC6CZ_Bcyql1kfHZvx9W85mA)
 [![twitter](https://img.shields.io/badge/twitter-@m31coding-1DA1F2.svg)](https://twitter.com/m31coding) 
 
+# Installing via NuGet
+
+```
+PM> Install-Package M31.BinarySearchTrees
+```
+
 # Usage
 
 More executable code examples may be found here: [M31.BinarySearchTrees.Storybook.csproj>Program.cs](src/M31.BinarySearchTrees.Storybook/Program.cs).
