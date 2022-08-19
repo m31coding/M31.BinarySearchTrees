@@ -2,6 +2,7 @@
 // ReSharper disable UnusedVariable
 
 CreationViaBuilder();
+CreationViaProperties();
 CreationViaConstructor();
 CreationViaConstructorWithValues();
 Rebalancing();
@@ -17,6 +18,21 @@ static void CreationViaBuilder()
                 .Right(4, b => b
                     .Left(3)
                     .Right(5)));
+}
+
+static void CreationViaProperties()
+{
+    Node<int> root = new(2)
+    {
+        Left = new(1),
+        Right = new(4)
+        {
+            Left = new(3),
+            Right = new(5)
+        }
+    };
+
+    BinarySearchTree<int> tree = new BinarySearchTree<int>(root);
 }
 
 static void CreationViaConstructor()
