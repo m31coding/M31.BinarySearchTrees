@@ -1,4 +1,5 @@
 ﻿using M31.BinarySearchTrees;
+
 // ReSharper disable UnusedVariable
 
 CreationViaBuilder();
@@ -14,10 +15,10 @@ static void CreationViaBuilder()
 {
     BinarySearchTree<int> tree = TreeBuilder<int>
         .BuildTree(2, b => b
-                .Left(1)
-                .Right(4, b => b
-                    .Left(3)
-                    .Right(5)));
+            .Left(1)
+            .Right(4, b => b
+                .Left(3)
+                .Right(5)));
 }
 
 static void CreationViaProperties()
@@ -51,7 +52,7 @@ static void CreationViaConstructorWithValues()
 static void Rebalancing()
 {
     BinarySearchTree<int> tree = TreeBuilder<int>
-     .BuildTree(3, b => b
+        .BuildTree(3, b => b
             .Left(2, b => b
                 .Left(1)));
 
@@ -63,7 +64,7 @@ static void Rebalancing()
 static void RangeSearch()
 {
     BinarySearchTree<int> tree = TreeBuilder<int>
-    .BuildTree(2, b => b
+        .BuildTree(2, b => b
             .Left(1)
             .Right(4, b => b
                 .Left(3)
@@ -79,7 +80,7 @@ static void RangeSearch()
 static void TreeTraversals()
 {
     BinarySearchTree<int> tree = TreeBuilder<int>
-    .BuildTree(5, b => b
+        .BuildTree(5, b => b
             .Left(4, b => b
                 .Left(3))
             .Right(7, b => b
@@ -95,7 +96,7 @@ static void TreeTraversals()
 static void Stringification()
 {
     BinarySearchTree<int> tree = TreeBuilder<int>
-    .BuildTree(2, b => b
+        .BuildTree(2, b => b
             .Left(1)
             .Right(4, b => b
                 .Left(3)
@@ -106,4 +107,3 @@ static void Stringification()
     var preOrderTraversalString = tree.Root.PreOrderTraversalString(); // "2-1-4-3-5"
     var postOrderTraversalString = tree.Root.PostOrderTraversalString(); // "1-3-5-4-2"
 }
-
