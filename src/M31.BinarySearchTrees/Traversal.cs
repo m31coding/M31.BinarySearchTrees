@@ -116,14 +116,12 @@ public static class Traversal
     /// <param name="onVisit">Action that will be executed when a node is visited.</param>
     public static void InOrderTraversal<T>(this Node<T>? tree, Action<Node<T>> onVisit)
     {
-        if (tree == null)
+        if (tree != null)
         {
-            return;
+            InOrderTraversal(tree.Left, onVisit);
+            onVisit(tree);
+            InOrderTraversal(tree.Right, onVisit);
         }
-
-        InOrderTraversal(tree.Left, onVisit);
-        onVisit(tree);
-        InOrderTraversal(tree.Right, onVisit);
     }
 
     /// <summary>
@@ -134,14 +132,12 @@ public static class Traversal
     /// <param name="onVisit">Action that will be executed when a node is visited.</param>
     public static void PreOrderTraversal<T>(this Node<T>? tree, Action<Node<T>> onVisit)
     {
-        if (tree == null)
+        if (tree != null)
         {
-            return;
+            onVisit(tree);
+            PreOrderTraversal(tree.Left, onVisit);
+            PreOrderTraversal(tree.Right, onVisit);
         }
-
-        onVisit(tree);
-        PreOrderTraversal(tree.Left, onVisit);
-        PreOrderTraversal(tree.Right, onVisit);
     }
 
     /// <summary>
@@ -152,14 +148,12 @@ public static class Traversal
     /// <param name="onVisit">Action that will be executed when a node is visited.</param>
     public static void PostOrderTraversal<T>(this Node<T>? tree, Action<Node<T>> onVisit)
     {
-        if (tree == null)
+        if (tree != null)
         {
-            return;
+            PostOrderTraversal(tree.Left, onVisit);
+            PostOrderTraversal(tree.Right, onVisit);
+            onVisit(tree);
         }
-
-        PostOrderTraversal(tree.Left, onVisit);
-        PostOrderTraversal(tree.Right, onVisit);
-        onVisit(tree);
     }
 
     /// <summary>
