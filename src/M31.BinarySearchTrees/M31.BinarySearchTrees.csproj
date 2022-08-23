@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageVersion>1.0.0</PackageVersion>
-    <Description>A generic binary search tree implementation for .NET featuring tree traversals, range search and rebalancing.</Description>
+    <Description>A generic binary search tree implementation in C# featuring tree traversals, range search and rebalancing.</Description>
     <Authors>Kevin Schaal</Authors>
     <PackageTags>BinarySearchTree TreeTraversals RangeSearch</PackageTags>
     <PackageProjectUrl>https://github.com/m31coding/M31.BinarySearchTrees</PackageProjectUrl>
