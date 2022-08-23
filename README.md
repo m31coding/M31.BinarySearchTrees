@@ -10,6 +10,8 @@ A generic [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)
 [![youtube](https://img.shields.io/badge/youtube-kevin%20schaal-FF0000.svg)](https://www.youtube.com/channel/UC6CZ_Bcyql1kfHZvx9W85mA)
 [![twitter](https://img.shields.io/badge/twitter-@m31coding-1DA1F2.svg)](https://twitter.com/m31coding) 
 
+Accompanying blog post: [www.m31coding.com>blog>binary-search-tree](https://www.m31coding.com/blog/binary-search-tree.html)
+
 # Usage
 
 More executable code examples may be found here: [M31.BinarySearchTrees.Storybook.csproj>Program.cs](src/M31.BinarySearchTrees.Storybook/Program.cs).
@@ -56,7 +58,7 @@ public class Node<T>
 
 ## Creation
 
-A tree can be created explicitly with the `TreeBuilder`-class as follows:
+A tree can be created explicitly with the `TreeBuilder` class as follows:
 
 ```cs
 BinarySearchTree<int> tree = TreeBuilder<int>
@@ -67,7 +69,23 @@ BinarySearchTree<int> tree = TreeBuilder<int>
              .Right(5)));
 ```
 
-Alternatively, you can create a tree and populate it with the `Insert` method:
+Alternatively, the same tree can be crafted by creating tree nodes and setting their `Left` and `Right` properties:
+
+```cs
+Node<int> root = new(2)
+{
+    Left = new(1),
+    Right = new(4)
+    {
+        Left = new(3),
+        Right = new(5)
+    }
+};
+
+BinarySearchTree<int> tree = new BinarySearchTree<int>(root);
+```
+
+Adding one value after the other is supported by the `Insert` method:
 
 ```cs
 BinarySearchTree<int> tree = new BinarySearchTree<int>();
