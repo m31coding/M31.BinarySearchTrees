@@ -1,4 +1,4 @@
-# M31.BinarySearchTrees - Binary search tree in C#
+# Binary search tree in C#
 
 A generic [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree) implementation in C# featuring tree traversals, range search and rebalancing. This library exists because there is no binary search tree available in the .NET library. If you need a self-balancing binary search tree, consider using the [SortedSet](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.sortedset-1) of the .NET library, which is based on a red-black tree ([source](https://source.dot.net/#System.Collections/System/Collections/Generic/SortedSet.cs)).
 
@@ -11,6 +11,12 @@ A generic [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)
 [![twitter](https://img.shields.io/badge/twitter-@m31coding-1DA1F2.svg)](https://twitter.com/m31coding) 
 
 Accompanying blog post: [www.m31coding.com>blog>binary-search-tree](https://www.m31coding.com/blog/binary-search-tree.html)
+
+# Installing via NuGet
+
+```
+PM> Install-Package M31.BinarySearchTrees
+```
 
 # Usage
 
